@@ -219,7 +219,7 @@ public abstract class AtrTrailingStopSettings implements CustomModule, CustomSet
     }
 
     private void addMultiplierSettings(final BookmapSettingsPanel panel) {
-        JComboBox<Double> c = new JComboBox<>(new Double[] { 0.5, 0.75, 1.0, 1.5, 2.0, 2.618, 3.0, 3.5, 5.0, 7.5, 10.0 });
+        JComboBox<Double> c = new JComboBox<>(new Double[] { 0.5, 0.75, 1.0, 1.5, 2.0, 2.618, 3.0, 3.5, 5.0, 7.5, 10.0, 15 });
         setAlignment(c);
         c.setSelectedItem(settings.multiplier);
         c.setEditable(true);
@@ -235,7 +235,7 @@ public abstract class AtrTrailingStopSettings implements CustomModule, CustomSet
 
     private void addBarPeriodSettings(final BookmapSettingsPanel panel) {
         JComboBox<Integer> c = new JComboBox<>(
-                new Integer[] { 1, 2, 3, 5, 10, 15, 30, 60, 120, 180, 300, 600, 900, 1800, 3600 });
+                new Integer[] { 1, 2, 3, 5, 10, 15, 28, 60, 120, 180, 300, 600, 900, 1800, 3600 });
         setAlignment(c);
         int selected = (int) (settings.barPeriod / 1_000_000_000L);
         c.setSelectedItem(selected);
